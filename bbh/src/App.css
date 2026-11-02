@@ -1,0 +1,152 @@
+:root {
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  color: #203c2c;
+  background: #f6f3e9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  background: #f6f3e9;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #b6c39a;
+  outline-offset: 5px;
+}
+
+.collection-section {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px;
+  text-align: center;
+  background: #f6f3e9;
+  color: #203c2c;
+}
+
+.collection-eyebrow,
+.collection-details > span {
+  margin-bottom: 28px;
+  color: #69775a;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.collection-section h2,
+.collection-details h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6vw, 82px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.collection-section p,
+.collection-details p {
+  max-width: 490px;
+  margin: 24px 0 0;
+  color: #657064;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.collection-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 15px 0;
+  border-bottom: 1px solid #203c2c;
+  font-size: 12px;
+  text-decoration: none;
+  transition: gap 220ms ease;
+}
+
+.collection-link:hover {
+  gap: 34px;
+}
+
+.collection-details {
+  display: flex;
+  min-height: 70svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px;
+  text-align: center;
+  background: #203c2c;
+  color: #f6f3e9;
+}
+
+.collection-details > span {
+  color: #c6cfad;
+}
+
+.collection-details p {
+  color: rgba(246, 243, 233, 0.75);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
