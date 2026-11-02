@@ -2,6 +2,15 @@ import { useState, useEffect, useCallback } from "react";
 import HeroScrollVideo from "./components/hero";
 import ProductReveal from "./components/ProductReveal";
 import { Preloader } from "./components/Preloader";
+import { Navigation } from "./components/Navigation";
+import { CustomCursor } from "./components/CustomCursor";
+import { BrandStory } from "./components/BrandStory";
+import { Manifesto } from "./components/Manifesto";
+import { ProductCategories } from "./components/ProductCategories";
+import { WhySustainable } from "./components/WhySustainable";
+import { BusinessSolutions } from "./components/BusinessSolutions";
+import { Impact } from "./components/Impact";
+import { FinalCTA } from "./components/FinalCTA";
 import "./App.css";
 
 function App() {
@@ -25,6 +34,9 @@ function App() {
 
   return (
     <div className="app-container">
+      <CustomCursor />
+      <Navigation />
+
       {isLoading && (
         <Preloader
           videoReady={videoReady}
@@ -39,41 +51,26 @@ function App() {
         {/* 2. The Cinematic Product Reveal */}
         <ProductReveal />
 
-        {/* 3. The Collection Section (Target for the CTA) */}
-        <section
-          id="collection"
-          style={{
-            height: "100vh",
-            backgroundColor: "#f6f3e9",
-            color: "#203c2c",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2 style={{ fontSize: "3rem", fontFamily: "Georgia, serif" }}>
-            The Collection
-          </h2>
-          <p style={{ marginTop: "1rem" }}>More sustainable content below.</p>
-        </section>
-        
-        {/* 4. Contact Section (Target for the Primary CTA) */}
-        <section
-          id="contact"
-          style={{
-            height: "50vh",
-            backgroundColor: "#203c2c",
-            color: "#f4f5e8",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2 style={{ fontSize: "2rem", fontFamily: "Georgia, serif" }}>
-            Let's build something better.
-          </h2>
-        </section>
+        {/* 3. Brand Story / About — pinned editorial with word masks */}
+        <BrandStory />
+
+        {/* 4. Sustainability Manifesto — scroll-controlled typography */}
+        <Manifesto />
+
+        {/* 5. Product Categories — asymmetric editorial gallery */}
+        <ProductCategories />
+
+        {/* 6. Why Choose Sustainable — comparison storytelling */}
+        <WhySustainable />
+
+        {/* 7. Business Solutions — horizontal scroll composition */}
+        <BusinessSolutions />
+
+        {/* 8. Impact / Sustainability Values — SVG path drawing */}
+        <Impact />
+
+        {/* 9. Final CTA — deep forest-green closing */}
+        <FinalCTA />
       </main>
     </div>
   );

@@ -1,0 +1,164 @@
+.impact {
+  position: relative;
+  padding: 140px clamp(24px, 5vw, 80px) 120px;
+  background: #e8dfce;
+  color: #203c2c;
+  overflow: hidden;
+}
+
+.impact-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.impact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  max-width: 700px;
+}
+
+.impact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #69775a;
+}
+
+.impact-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4a6b3a;
+  box-shadow: 0 0 12px rgba(74, 107, 58, 0.4);
+}
+
+.impact-heading {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  will-change: transform, opacity;
+}
+
+.impact-heading em {
+  font-style: italic;
+  color: #4a6b3a;
+}
+
+.impact-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 8vw;
+}
+
+.impact-visual {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  height: 400px;
+  position: sticky;
+  top: 120px;
+}
+
+.impact-visual svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.impact-path-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  background: #c8d8b0;
+  box-shadow: 0 0 16px rgba(200, 216, 176, 0.6);
+  will-change: transform, opacity;
+}
+
+.impact-values {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.impact-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  will-change: transform, opacity;
+}
+
+.impact-value-number {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #c8d8b0;
+  padding-top: 4px;
+}
+
+.impact-value-title {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #203c2c;
+}
+
+.impact-value-desc {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #657064;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .impact {
+    padding: 100px 24px 80px;
+  }
+
+  .impact-body {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .impact-visual {
+    width: 180px;
+    height: 260px;
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  .impact-heading {
+    font-size: clamp(32px, 9vw, 48px);
+  }
+
+  .impact-values {
+    gap: 36px;
+  }
+
+  .impact-value-title {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .impact-value-desc {
+    font-size: 14px;
+  }
+}

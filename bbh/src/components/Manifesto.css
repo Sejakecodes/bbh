@@ -1,0 +1,132 @@
+.manifesto {
+  position: relative;
+  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f5e8;
+}
+
+.manifesto-bg {
+  position: absolute;
+  inset: 0;
+  background: #f4f5e8;
+  z-index: 0;
+}
+
+.manifesto-shape {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.manifesto-shape--1 {
+  top: 10%;
+  right: 8%;
+  width: clamp(120px, 18vw, 280px);
+  height: clamp(120px, 18vw, 280px);
+}
+
+.manifesto-shape--2 {
+  bottom: 12%;
+  left: 6%;
+  width: clamp(100px, 15vw, 220px);
+  height: clamp(100px, 15vw, 220px);
+}
+
+.manifesto-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 1200px;
+}
+
+.manifesto-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #69775a;
+  will-change: transform, opacity;
+}
+
+.manifesto-headline {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 8vw, 120px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #203c2c;
+}
+
+.manifesto-line {
+  display: block;
+}
+
+.manifesto-line-reveal {
+  overflow: hidden;
+  will-change: clip-path;
+}
+
+.manifesto-word {
+  display: inline-block;
+  will-change: transform, color;
+}
+
+.manifesto-word--offset {
+  position: relative;
+}
+
+.manifesto-word--solid {
+  color: #203c2c;
+}
+
+.manifesto-word--outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(32, 60, 44, 0.3);
+}
+
+.manifesto-subcopy {
+  max-width: 520px;
+  margin: 48px 0 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #657064;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 900px) {
+  .manifesto-content {
+    padding: 60px 24px;
+  }
+
+  .manifesto-headline {
+    font-size: clamp(32px, 10vw, 56px);
+  }
+
+  .manifesto-subcopy {
+    font-size: 14px;
+    margin-top: 32px;
+  }
+
+  .manifesto-shape--1 {
+    top: 5%;
+    right: -5%;
+  }
+
+  .manifesto-shape--2 {
+    bottom: 5%;
+    left: -5%;
+  }
+}
