@@ -179,7 +179,6 @@ const ProductReveal: React.FC = () => {
         scenes.forEach((scene, index) => {
           if (index === 0) return;
 
-          const previousLayer = layers[index - 1];
           const currentLayer = layers[index];
           const previousImage = images[index - 1];
           const currentImage = images[index];

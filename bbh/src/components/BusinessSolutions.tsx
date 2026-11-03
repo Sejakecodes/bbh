@@ -126,7 +126,6 @@ export const BusinessSolutions = () => {
       // Reveal images and titles as they enter
       panels.forEach((_, idx) => {
         const startProgress = idx / panels.length;
-        const endProgress = (idx + 0.5) / panels.length;
 
         tl.to(
           images[idx],

@@ -19,9 +19,6 @@ export const Manifesto = () => {
     const outlineWords = section.querySelectorAll<HTMLElement>(
       ".manifesto-word--outline",
     );
-    const solidWords = section.querySelectorAll<HTMLElement>(
-      ".manifesto-word--solid",
-    );
     const lineReveals = section.querySelectorAll<HTMLElement>(
       ".manifesto-line-reveal",
     );

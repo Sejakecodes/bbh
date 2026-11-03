@@ -17,7 +17,6 @@ export const FinalCTA = () => {
     ).matches;
 
     const bgLayer = section.querySelector<HTMLElement>(".cta-bg-layer");
-    const headline = section.querySelector<HTMLElement>(".cta-headline");
     const headlineWords = section.querySelectorAll<HTMLElement>(".cta-word");
     const subcopy = section.querySelector<HTMLElement>(".cta-subcopy");
     const buttons = section.querySelectorAll<HTMLElement>(".cta-btn");
